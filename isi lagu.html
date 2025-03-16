@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playlist Musik dengan Equalizer</title>
+    <title>Playlist Musik</title>
     <style>
         * {
             margin: 0;
@@ -50,7 +50,7 @@
             width: 18%;
         }
         .song {
-            margin: 10px 0;
+            margin: 5px 0;
             font-size: 0.9em;
         }
         audio {
@@ -60,71 +60,79 @@
             font-size: 1em;
             margin-bottom: 5px;
         }
-        canvas {
-            width: 100%;
-            height: 30px;
-            background: rgba(0, 0, 0, 0.5);
-        }
     </style>
 </head>
 <body>
+
     <div class="top-right">
         <button class="btn" onclick="logout()">Logout</button>
         <input type="file" id="audioUpload" accept="audio/*" style="display: none;">
         <button class="btn" onclick="document.getElementById('audioUpload').click()">Upload Audio</button>
     </div>
-    
+
     <div class="container">
         <div class="column">
-            <h2>Playlist</h2>
-            <div class="song">
-                <p>KISINAN 2 - MASDDDHO</p>
-                <audio src="KISINAN 2 - MASDDDHO (OFFICIAL MUSIC VIDEO).mp3" controls></audio>
-                <canvas></canvas>
-            </div>
-            <div class="song">
-                <p>DJ PUDAR ROSSA</p>
-                <audio src="DJ PUDAR ROSSA JEDAG JEDUG REMIX [PLAT JMK] BY MASKHAT.mp3" controls></audio>
-                <canvas></canvas>
-            </div>
+            <h2>Kiri</h2>
+            <div class="song"><p>KISINAN 2 - MASDDDHO</p><audio src="KISINAN 2 - MASDDDHO (OFFICIAL MUSIC VIDEO).mp3" controls ></audio></div>
+            <div class="song"><p>DJ PUDAR ROSSA</p><audio src="DJ PUDAR ROSSA JEDAG JEDUG REMIX [PLAT JMK] BY MASKHAT.mp3" controls></audio></div>
+            <div class="song"><p>Marian & Sean - TRACK 7</p><audio src="Marian & Sean - TRACK 7 (Official Audio).mp3" controls ></audio></div>
+            <div class="song"><p>Devin Riggins - Currents</p><audio src="Devin Riggins - Currents ft. Jaime Deraz (LOSTWIND Remix).mp3" controls></audio></div>
+            <div class="song"><p>キャットラビング</p><audio src="キャットラビング _ 香椎モイミ feat. 可不-mc.mp3" controls></audio></div>
+        </div>
+        
+        <div class="column">
+            <h2>Tengah Kiri</h2>
+            <div class="song"><p>CHASHKAKEFIRA - KOKIYO</p><audio src="CHASHKAKEFIRA DJ PXRPLE – KOKIYO.mp3" controls></audio></div>
+            <div class="song"><p>CHASHKAKEFIRA - STARGAZER</p><audio  src="CHASHKAKEFIRA VXNT1K – STARGAZER.mp3" controls></audio></div>
+            <div class="song"><p>DJ DISAAT AKU</p><audio src="DJ DISAAT AKU MENCINTAIMU X SHEESH X CINTA MONYET JEDAG JEDUG REMIX [PLAT JMK] BY MASKHAT.mp3" controls></audio></div>
+            <div class="song"><p>DJ HEY LADIES</p><audio src="DJ HEY LADIES JEDAG JEDUG REMIX [PLAT JMK] BY MASKHAT !!.mp3" controls></audio></div>
+            <div class="song"><p>Ava Max - Choose Your Fighter</p><audio src="Ava Max - Choose Your Fighter (From Barbie The Album) [Official Audio].mp3" controls></audio></div>
+        </div>
+
+        <div class="column">
+            <h2>Tengah</h2>
+            <div class="song"><p>Tenxi Naykilla - Garam & Madu</p><audio  src="Tenxi Naykilla & Jemsii - Garam & Madu (Sakit Dadaku) (Official Music Video).mp3" controls></audio></div>
+            <div class="song"><p>DJ Tetap Mencintai</p><audio  src="DJ TETAP MENCINTAI X OSHIBE JEDAG JEDUG REMIX [PLAT JMK] BY MASKHAT !!.mp3" controls></audio></div>
+            <div class="song"><p>DJ Cinta Monyet</p><audio  src="DJ DISAAT AKU MENCINTAIMU X SHEESH X CINTA MONYET JEDAG JEDUG REMIX [PLAT JMK] BY MASKHAT.mp3" controls ></audio></div>
+            <div class="song"><p>DJ Oshibe Remix</p><audio  src="DJ TETAP MENCINTAI X OSHIBE JEDAG JEDUG REMIX [PLAT JMK] BY MASKHAT !!.mp3" controls></audio></div>
+            <div class="song"><p>DJ Sheesh</p><audio src="DJ DISAAT AKU MENCINTAIMU X SHEESH X CINTA MONYET JEDAG JEDUG REMIX [PLAT JMK] BY MASKHAT.mp3" controls></audio></div>
+        </div>
+
+        <div class="column">
+            <h2>Tengah Kanan</h2>
+            <div class="song"><p>DJ kekashih halal </p><audio src="DJ KEKASIH HALAL WALI JEDAG JEDUG REMIX [PLAT JMK] BY MASKHAT !!.mp3" controls></audio></div>
+            <div class="song"><p>DJ EDM Party</p><audio  src="EDM_Party.mp3" controls></audio></div>
+            <div class="song"><p>DJ Nightcore Vibes</p><audio  src="Nightcore_Vibes.mp3" controls></audio></div>
+            <div class="song"><p>DJ Electro House</p><audio src="Electro_House.mp3" controls></audio></div>
+            <div class="song"><p>DJ Bass Boosted</p><audio  src="Bass_Boosted.mp3" controls ></audio></div>
+        </div>
+
+        <div class="column">
+            <h2>Kanan</h2>
+            <div class="song"><p>DJ Remix Dugem</p><audio  src="Remix_Dugem.mp3" controls></audio></div>
+            <div class="song"><p>DJ Hardstyle Drop</p><audio  src="Hardstyle_Drop.mp3" controls></audio></div>
+            <div class="song"><p>DJ House Mix</p><audio  src="House_Mix.mp3" controls></audio></div>
+            <div class="song"><p>DJ Trap Nation</p><audio  src="Trap_Nation.mp3" controls></audio></div>
+            <div class="song"><p>DJ Future Bass</p><audio  src="Future_Bass.mp3" controls></audio></div>
         </div>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const audios = document.querySelectorAll("audio");
-            const canvases = document.querySelectorAll("canvas");
-            
             audios.forEach((audio, index) => {
-                const canvas = canvases[index];
-                const ctx = canvas.getContext("2d");
-                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                const analyser = audioContext.createAnalyser();
-                analyser.fftSize = 64;
-                const source = audioContext.createMediaElementSource(audio);
-                source.connect(analyser);
-                analyser.connect(audioContext.destination);
-
-                const bufferLength = analyser.frequencyBinCount;
-                const dataArray = new Uint8Array(bufferLength);
-                
-                function draw() {
-                    requestAnimationFrame(draw);
-                    analyser.getByteFrequencyData(dataArray);
-                    ctx.clearRect(0, 0, canvas.width, canvas.height);
-                    
-                    const barWidth = (canvas.width / bufferLength) * 2.5;
-                    let x = 0;
-                    for (let i = 0; i < bufferLength; i++) {
-                        const barHeight = dataArray[i] / 2;
-                        ctx.fillStyle = `rgb(${barHeight + 100}, 50, 150)`;
-                        ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
-                        x += barWidth + 1;
+                audio.addEventListener("play", function () {
+                    audios.forEach(otherAudio => {
+                        if (otherAudio !== audio) {
+                            otherAudio.pause();
+                            otherAudio.currentTime = 0;
+                        }
+                    });
+                });
+                audio.addEventListener("ended", function () {
+                    if (index < audios.length - 1) {
+                        audios[index + 1].play();
                     }
-                }
-                
-                audio.addEventListener("play", () => {
-                    audioContext.resume().then(draw);
                 });
             });
         });
@@ -135,15 +143,16 @@
                 const url = URL.createObjectURL(file);
                 const newSong = document.createElement('div');
                 newSong.classList.add('song');
-                newSong.innerHTML = `<p>${file.name}</p><audio controls src="${url}"></audio><canvas></canvas>`;
+                newSong.innerHTML = `<p>${file.name}</p><audio controls src="${url}"></audio>`;
                 document.querySelector('.column:last-child').appendChild(newSong);
             }
         });
 
         function logout() {
             alert("Logout berhasil!");
-            window.location.href = "login.html";
+            window.location.href = "login.html"; // Ganti dengan halaman login yang sesuai
         }
     </script>
+
 </body>
 </html>
