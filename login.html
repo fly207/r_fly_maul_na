@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, rgb(34, 193, 195), rgb(253, 187, 45));
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        .login-container:hover {
+            transform: scale(1.05);
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            transition: box-shadow 0.3s;
+        }
+        input:focus {
+            box-shadow: 0 0 10px rgba(255, 193, 7, 0.8);
+            outline: none;
+        }
+        .button {
+            background: #ffc107;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background: #ff9800;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container" id="login-box">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button class="button" onclick="attemptLogin()">Login</button>
+        <p id="error-message" style="color: red;"></p>
+    </div>
+    
+    <script>
+        function login(username, password) {
+            const validUsername = "rafly";
+            const validPassword = "200076";
+            return username === validUsername && password === validPassword;
+        }
+
+        function attemptLogin() {
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+            if (login(user, pass)) {
+                alert("Login berhasil! Anda akan diarahkan ke beranda.");
+                localStorage.setItem("isLoggedIn", true);
+                window.location.href = "audio.html";
+            } else {
+                document.getElementById("error-message").innerText = "Username atau password salah!";
+            }
+        }
+
+        function checkLoginStatus() {
+            if (localStorage.getItem("isLoggedIn")) {
+                window.location.href = "audio.html"; // Langsung ke halaman utama jika sudah login
+            }
+        }
+
+        checkLoginStatus();
+    </script>
+</body>
+</html>
